@@ -16,6 +16,8 @@ Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
 // Admin Routes (requires auth)
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminHomeController::class, 'dashboard'])->name('dash');
+    Route::get('/index', [AdminHomeController::class, 'index'])->name('index');
+    Route::get('/newStep1', [AdminHomeController::class, 'newStep1'])->name('newStep1');
 });
 
 // Include admin Google Auth routes

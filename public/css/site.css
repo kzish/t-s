@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    background-color: #0d1b4c; /* Dark Blue */
+    padding-top: 60px; /* space for top navbar */
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    padding: 12px 20px;
+    display: block;
+}
+
+.sidebar .nav-link.active {
+    background-color: #e0e0e0; /* Light Grey */
+    color: #0d1b4c !important; /* Dark Blue text */
+    font-weight: bold;
+}
+
+.content {
+    margin-left: 240px; /* same as sidebar width */
+    padding: 20px;
+}
+
+.navbar {
+    margin-left: 240px; /* push navbar beside sidebar */
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-teal {
+    background-color: teal;
+    color: white;
+}
+.btn-teal:hover {
+    background-color: #006d6d; /* darker teal on hover */
+    color: white;
+}
+
+table.tealhead thead tr th{
+    background: #dedede !important;
+}
+table.tealhead thead tr td{
+    background: #006d6d !important;
+    color:white;
+}
+

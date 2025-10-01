@@ -4,68 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Bootstrap 5 -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Nunito', sans-serif;
-        }
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 240px;
-            background-color: #0d1b4c;
-            /* Dark Blue */
-            padding-top: 60px;
-            /* space for top navbar */
-        }
-
-        .sidebar .nav-link {
-            color: #ffffff;
-            padding: 12px 20px;
-            display: block;
-        }
-
-        .sidebar .nav-link.active {
-            background-color: #e0e0e0;
-            /* Light Grey */
-            color: #0d1b4c !important;
-            /* Dark Blue text */
-            font-weight: bold;
-        }
-
-        .content {
-            margin-left: 240px;
-            /* same as sidebar width */
-            padding: 20px;
-        }
-
-        .navbar {
-            margin-left: 240px;
-            /* push navbar beside sidebar */
-        }
-
-        .profile-img {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-    </style>
-
+    <!-- Your site CSS -->
+    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
     @stack('styles')
 </head>
+
+
 
 <body>
     <!-- Sidebar -->

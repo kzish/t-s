@@ -12,4 +12,38 @@ class AdminHomeController extends Controller
     {
         return view('admin.home.dashboard');
     }
+
+    public function index()
+    {
+        return view('admin.home.index');
+    }
+
+    public function newStep1()
+    {
+        return view('admin.home.newStep1');
+    }
+    public function newStep2()
+    {
+        return view('admin.home.newStep2');
+    }
+    public function newStep3()
+    {
+        return view('admin.home.newStep3');
+    }
+    public function newStep4()
+    {
+        return view('admin.home.newStep4');
+    }
+    public function newStep5()
+    {
+        return view('admin.home.newStep5');
+    }
+    public function newStep6()
+    {
+        return view('admin.home.newStep6');
+    }
+    public function newStep7()
+    {
+        return view('admin.home.newStep7');
+    }
 }
