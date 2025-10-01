@@ -19,8 +19,8 @@
                 {{-- Circle --}}
                 <div class="rounded-circle border d-flex justify-content-center align-items-center mb-2"
                     style="width: 40px; height: 40px;
-                        background-color: {{ $step['number'] == $active ? '#006d6d' : 'transparent' }};
-                        color: {{ $step['number'] == $active ? '#fff' : '#000' }};">
+                        background-color: {{ $step['number'] == $active ? '#006d6d' : '#fff' }};
+                        color: {{ $step['number'] == $active ? '#fff' : '#000' }}; border-color:#006d6d!important">
                     {{ $step['number'] }}
                 </div>
 
@@ -70,10 +70,32 @@
         text-decoration: none;
     }
 
-    .bg-teal {
-        background-color: #006d6d !important;
-        /* filled circle */
-        border-color: #006d6d !important;
+    .teal-line {
+        position: relative;
+        margin: 2rem 0;
     }
 
-    .
+    .teal-line .d-flex {
+        position: relative;
+        z-index: 1;
+        /* circles appear above the line */
+    }
+
+    .teal-line::before {
+        content: '';
+        position: absolute;
+        top: 25%;
+        /* middle of the circles */
+        left: 5%;
+        /* start a bit after first circle */
+        right: 5%;
+        /* end a bit before last circle */
+        height: 1px;
+        /* thickness of the line */
+        background-color: #006d6d;
+        /* teal */
+        z-index: -1;
+        /* behind the circles */
+        transform: translateY(-50%);
+        border-radius: 2px;
+    }
