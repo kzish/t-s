@@ -8,7 +8,7 @@ use App\Models\Placement;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
-class AuthController extends Controller
+class AdminAuthController extends Controller
 {
     /**
      * Show the login page.
@@ -40,7 +40,7 @@ class AuthController extends Controller
 
             // ✅ Check MSU staff email
             if (! str_ends_with($googleUser->email, '@staff.msu.ac.zw')) {
-                return redirect()->route('admin.login')
+                return redirect()->route('login')
                     ->with('error', 'Only MSU staff emails (@staff.msu.ac.zw) are allowed to access this system.');
             }
 
@@ -58,17 +58,6 @@ class AuthController extends Controller
                     'active'    => true,
                 ]);
 
-                // Attach admin role
-                $adminRole = Role::where('name', 'admin')->first();
-                if ($adminRole) {
-                    $user->roles()->attach($adminRole->id);
-                }
-            }
-
-            // ✅ Ensure user has Admin role
-            if (! $user->roles()->where('name', 'admin')->exists()) {
-                return redirect()->route('admin.login')
-                    ->with('error', 'Access denied. Only administrators can log in.');
             }
 
             // ✅ Update user info
@@ -84,7 +73,7 @@ class AuthController extends Controller
             return redirect()->route('admin.dash');
 
         } catch (\Exception $e) {
-            return redirect()->route('admin.login')
+            return redirect()->route('$request->session()->invalidate();login')
                 ->with('error', 'An error occurred during authentication. Please try again.');
         }
     }
@@ -97,9 +86,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return redirect()->route('admin.login')->with('success', 'You have been logged out successfully.');
+        return redirect()->route('login')->with('success', 'You have been logged out successfully.');
     }
 }

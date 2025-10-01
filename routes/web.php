@@ -2,14 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminAuthController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [AdminHomeController::class, 'login'])->name('login');
-Route::get('/', [AdminHomeController::class, 'login'])->name('login');
-Route::post('/logout', [AdminHomeController::class, 'logout'])->name('logout');
+Route::get('/login', [AdminAuthController::class, 'login'])->name('login');
+Route::get('/', [AdminAuthController::class, 'login'])->name('login');
+Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
 
 
 // Admin Routes (requires auth)
