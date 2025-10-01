@@ -32,47 +32,19 @@
         @endforeach
     </div>
 </div>
-
+<div class="bbottom"></div>
 
 <style>
-    .timeline {
-        position: relative;
-    }
-
-    .timeline-step {
-        position: relative;
-    }
-
-    .timeline-step:not(:last-child) .timeline-line {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(50%);
-        width: 100%;
-        height: 2px;
-        background: #006d6d;
-        /* teal-ish line */
-        z-index: 0;
-    }
-
-    .timeline-circle {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        border-radius: 50%;
-        display: inline-block;
+    .bbottom {
         border: 2px solid #006d6d;
-        /* teal border */
-        text-align: center;
-        font-weight: bold;
-        position: relative;
-        z-index: 1;
-        text-decoration: none;
+        border-radius: 100px;
     }
 
     .teal-line {
         position: relative;
-        margin: 2rem 0;
+        margin: 2rem 0 3rem 0;
+        /* bottom margin to push card down */
+        z-index: 0;
     }
 
     .teal-line .d-flex {
@@ -94,8 +66,9 @@
         /* thickness of the line */
         background-color: #006d6d;
         /* teal */
-        z-index: -1;
+        z-index: 0;
         /* behind the circles */
         transform: translateY(-50%);
         border-radius: 2px;
     }
+</style>

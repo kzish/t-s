@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('timeline')
-    <x-timeline :active="1" />
+    <x-timeline :active="5" />
 @endsection
 @section('breadcrumbs')
     @php

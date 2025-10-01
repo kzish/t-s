@@ -74,12 +74,14 @@
         </div>
     </nav>
 
-    <br/>
-    <br/>
-    <br/>
+    <br />
+    <br />
+    <br />
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
         {{-- Breadcrumbs slot --}}
         @yield('breadcrumbs')
+        {{-- timeline slot --}}
+        @yield('timeline')
         {{-- Main content --}}
         @yield('content')
     </main>
