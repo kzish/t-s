@@ -16,16 +16,16 @@
         {{-- Card --}}
         <div class="card rounded shadow-sm mt-4 p-4">
             <form>
-                <p>Will you be driving</p>
+                <p>Select the Vehicle type</p>
                 {{-- Buttons --}}
                 <div class="d-flex justify-content-start gap-2">
                     <button type="button" class="btn btn-teal"
-                        onclick="window.location.href='{{ route('admin.newStep6UniversityBus') }}'">
-                        Yes
+                        onclick="window.location.href='{{ route('admin.newStep6UniversityTransportation.busSummary') }}'">
+                        Bus
                     </button>
                     <button type="button" class="btn btn-teal"
                         onclick="window.location.href='{{ route('admin.newStep6UniversityPrivate') }}'">
-                        No
+                        Private Vehicle
                     </button>
                 </div>
             </form>

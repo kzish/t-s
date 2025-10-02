@@ -54,6 +54,10 @@ class AdminHomeController extends Controller
     {
         return view('admin.home.newStep6University');
     }
+    public function busSummary()
+    {
+        return view('admin.home.newStep6UniversityTransportation.busSummary');
+    }
     public function newStep7()
     {
         return view('admin.home.newStep7');

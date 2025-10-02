@@ -27,6 +27,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/newStep6', [AdminHomeController::class, 'newStep6'])->name('newStep6');
     Route::get('/newStep6University', [AdminHomeController::class, 'newStep6University'])->name('newStep6University');
     Route::get('/newStep6UniversityPrivate', [AdminHomeController::class, 'newStep6UniversityPrivate'])->name('newStep6UniversityPrivate');
+    Route::get('/newStep6UniversityTransportation/busSummary', [AdminHomeController::class, 'busSummary'])->name('newStep6UniversityTransportation.busSummary');
     Route::get('/newStep7', [AdminHomeController::class, 'newStep7'])->name('newStep7');
 });
 

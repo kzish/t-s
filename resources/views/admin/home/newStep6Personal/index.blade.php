@@ -20,7 +20,7 @@
                 {{-- Buttons --}}
                 <div class="d-flex justify-content-start gap-2">
                     <button type="button" class="btn btn-teal"
-                        onclick="window.location.href='{{ route('admin.newStep6UniversityBus') }}'">
+                        onclick="window.location.href='{{ route('admin.newStep6UniversityTransportation.busSummary') }}'">
                         Bus
                     </button>
                     <button type="button" class="btn btn-teal"

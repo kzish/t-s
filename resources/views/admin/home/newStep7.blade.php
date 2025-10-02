@@ -14,25 +14,37 @@
 @section('content')
     <div class="my-4">
         {{-- Card --}}
-        <div class="card rounded shadow-sm mt-4 p-4">
+        <div class="card rounded shadow-sm mt-4 p-4 center card">
             <form>
-                {{-- Purpose of Meeting/Trip --}}
-                <div class="mb-3">
-                    <label for="tripPurpose" class="form-label">Purpose of Trip</label>
-                    <select class="form-select" id="tripPurpose" name="tripPurpose">
-                        <option value="" selected>Select purpose</option>
-                        <option value="meeting">Meeting</option>
-                        <option value="training">Training</option>
-                        <option value="conference">Conference</option>
-                        <option value="other">Other</option>
-                    </select>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-label">Expense name</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Amount</label>
+                        <input type="number" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Quotation/Invoice</label>
+                        <input type="file" class="form-control" />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Quotation/Invoice</label>
+                        <input type="file" class="form-control" />
+                    </div>
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-outline-secondary">Add to list</button>
+                    </div>
                 </div>
 
-                {{-- Description / Textarea --}}
-                <div class="mb-3">
-                    <label for="tripDescription" class="form-label">Description</label>
-                    <textarea class="form-control" id="tripDescription" rows="4" placeholder="Enter details here..."></textarea>
-                </div>
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">An active item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">A fourth item</li>
+                    <li class="list-group-item">And a fifth one</li>
+                </ul>
 
                 {{-- Buttons --}}
                 <div class="d-flex justify-content-end gap-2">
