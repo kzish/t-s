@@ -14,30 +14,55 @@
 @section('content')
     <div class="my-4">
         {{-- Card --}}
-        <div class="card rounded shadow-sm mt-4 p-4">
+        <div class="card rounded shadow-sm mt-4 p-4 center-card">
             <form>
-                {{-- Purpose of Meeting/Trip --}}
-                <div class="mb-3">
-                    <label for="tripPurpose" class="form-label">Purpose of Trip</label>
-                    <select class="form-select" id="tripPurpose" name="tripPurpose">
-                        <option value="" selected>Select purpose</option>
-                        <option value="meeting">Meeting</option>
-                        <option value="training">Training</option>
-                        <option value="conference">Conference</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
 
-                {{-- Description / Textarea --}}
-                <div class="mb-3">
-                    <label for="tripDescription" class="form-label">Description</label>
-                    <textarea class="form-control" id="tripDescription" rows="4" placeholder="Enter details here..."></textarea>
-                </div>
+
+                <table class="table no-bottom-border">
+                    <tr>
+                        <td>Date Of Departure:</td>
+                        <td><input type="date" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td>Date Of Arrival:</td>
+                        <td><input type="date" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td>Time Of Departure:</td>
+                        <td><input type="time" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td>Time Of Departure:</td>
+                        <td><input type="time" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><div style="height:5px; background-color:#006d6d; border-radius:100px;"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Date Business Commenced:</td>
+                        <td><input type="date" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td>Date Business Ended:</td>
+                        <td><input type="date" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td>Time Business Commenced:</td>
+                        <td><input type="time" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                        <td>Business End Time:</td>
+                        <td><input type="time" class="form-control"/></td>
+                    </tr>
+                </table>
 
                 {{-- Buttons --}}
                 <div class="d-flex justify-content-end gap-2">
                     <button type="button" class="btn btn-outline-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-teal">Next</button>
+                    <button type="button" class="btn btn-teal"
+                        onclick="window.location.href='{{ route('admin.newStep4') }}'">
+                        Next
+                    </button>
                 </div>
             </form>
         </div>

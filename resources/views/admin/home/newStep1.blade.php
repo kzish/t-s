@@ -14,7 +14,7 @@
 @section('content')
     <div class="my-4">
         {{-- Card --}}
-        <div class="card rounded shadow-sm mt-4 p-4">
+        <div class="card rounded shadow-sm mt-4 p-4 center-card">
             <form>
                 {{-- Purpose of Meeting/Trip --}}
                 <div class="mb-3">
@@ -37,7 +37,10 @@
                 {{-- Buttons --}}
                 <div class="d-flex justify-content-end gap-2">
                     <button type="button" class="btn btn-outline-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-teal">Next</button>
+                    <button type="button" class="btn btn-teal"
+                        onclick="window.location.href='{{ route('admin.newStep2') }}'">
+                        Next
+                    </button>
                 </div>
             </form>
         </div>

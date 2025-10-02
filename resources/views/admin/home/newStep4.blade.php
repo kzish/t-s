@@ -16,28 +16,20 @@
         {{-- Card --}}
         <div class="card rounded shadow-sm mt-4 p-4">
             <form>
-                {{-- Purpose of Meeting/Trip --}}
-                <div class="mb-3">
-                    <label for="tripPurpose" class="form-label">Purpose of Trip</label>
-                    <select class="form-select" id="tripPurpose" name="tripPurpose">
-                        <option value="" selected>Select purpose</option>
-                        <option value="meeting">Meeting</option>
-                        <option value="training">Training</option>
-                        <option value="conference">Conference</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
 
-                {{-- Description / Textarea --}}
-                <div class="mb-3">
-                    <label for="tripDescription" class="form-label">Description</label>
-                    <textarea class="form-control" id="tripDescription" rows="4" placeholder="Enter details here..."></textarea>
-                </div>
+
+                <p>Select your type of accomodation</p>
 
                 {{-- Buttons --}}
-                <div class="d-flex justify-content-end gap-2">
-                    <button type="button" class="btn btn-outline-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-teal">Next</button>
+                <div class="d-flex justify-content-start gap-2">
+                    <button type="button" class="btn btn-teal"
+                        onclick="window.location.href='{{ route('admin.newStep4AccomodationProven') }}'">
+                        Proven
+                    </button>
+                    <button type="button" class="btn btn-teal"
+                        onclick="window.location.href='{{ route('admin.newStep4AccomodationUnProven') }}'">
+                        Unproven
+                    </button>
                 </div>
             </form>
         </div>

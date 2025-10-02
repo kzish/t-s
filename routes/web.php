@@ -21,8 +21,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/newStep2', [AdminHomeController::class, 'newStep2'])->name('newStep2');
     Route::get('/newStep3', [AdminHomeController::class, 'newStep3'])->name('newStep3');
     Route::get('/newStep4', [AdminHomeController::class, 'newStep4'])->name('newStep4');
+    Route::get('/newStep4AccomodationProven', [AdminHomeController::class, 'newStep4AccomodationProven'])->name('newStep4AccomodationProven');
+    Route::get('/newStep4AccomodationUnProven', [AdminHomeController::class, 'newStep4AccomodationUnProven'])->name('newStep4AccomodationUnProven');
     Route::get('/newStep5', [AdminHomeController::class, 'newStep5'])->name('newStep5');
     Route::get('/newStep6', [AdminHomeController::class, 'newStep6'])->name('newStep6');
+    Route::get('/newStep6University', [AdminHomeController::class, 'newStep6University'])->name('newStep6University');
+    Route::get('/newStep6UniversityPrivate', [AdminHomeController::class, 'newStep6UniversityPrivate'])->name('newStep6UniversityPrivate');
     Route::get('/newStep7', [AdminHomeController::class, 'newStep7'])->name('newStep7');
 });
 

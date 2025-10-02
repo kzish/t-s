@@ -50,11 +50,21 @@ body {
     color: white;
 }
 
-table.tealhead thead tr th{
+table.tealhead thead tr th {
     background: #dedede !important;
 }
-table.tealhead thead tr td{
+table.tealhead thead tr td {
     background: #006d6d !important;
-    color:white;
+    color: white;
 }
 
+.center-card {
+    width: 50%;
+    margin: auto;
+}
+
+/* remove bottom borders only */
+.table.no-bottom-border tr td,
+.table.no-bottom-border tr th {
+    border-bottom: none !important;
+}

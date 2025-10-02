@@ -34,6 +34,14 @@ class AdminHomeController extends Controller
     {
         return view('admin.home.newStep4');
     }
+    public function newStep4AccomodationProven()
+    {
+        return view('admin.home.newStep4AccomodationProven');
+    }
+    public function newStep4AccomodationUnProven()
+    {
+        return view('admin.home.newStep4AccomodationUnProven');
+    }
     public function newStep5()
     {
         return view('admin.home.newStep5');
@@ -41,6 +49,10 @@ class AdminHomeController extends Controller
     public function newStep6()
     {
         return view('admin.home.newStep6');
+    }
+    public function newStep6University()
+    {
+        return view('admin.home.newStep6University');
     }
     public function newStep7()
     {

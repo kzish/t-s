@@ -14,32 +14,38 @@
 @section('content')
     <div class="my-4">
         {{-- Card --}}
-        <div class="card rounded shadow-sm mt-4 p-4">
+        <div class="card text-dark bg-info mb-3 rounded mt-4 p-4">
             <form>
-                {{-- Purpose of Meeting/Trip --}}
-                <div class="mb-3">
-                    <label for="tripPurpose" class="form-label">Purpose of Trip</label>
-                    <select class="form-select" id="tripPurpose" name="tripPurpose">
-                        <option value="" selected>Select purpose</option>
-                        <option value="meeting">Meeting</option>
-                        <option value="training">Training</option>
-                        <option value="conference">Conference</option>
-                        <option value="other">Other</option>
-                    </select>
+                <div class="card-header">Meals Summary</div>
+                <div class="card-body">
+                    <ul>
+                        <li>Total breakfast meals: X3 (Provided by Accomodation)</li>
+                        <li>Total lunch meals: X3</li>
+                        <li>Total supper meals: X3</li>
+                        <li>Total meal funds: $50,000</li>
+                    </ul>
                 </div>
-
-                {{-- Description / Textarea --}}
-                <div class="mb-3">
-                    <label for="tripDescription" class="form-label">Description</label>
-                    <textarea class="form-control" id="tripDescription" rows="4" placeholder="Enter details here..."></textarea>
-                </div>
-
                 {{-- Buttons --}}
                 <div class="d-flex justify-content-end gap-2">
                     <button type="button" class="btn btn-outline-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-teal">Next</button>
+                    <button type="button" class="btn btn-teal"
+                        onclick="window.location.href='{{ route('admin.newStep6') }}'">
+                        Next
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 @endsection
+
+<style>
+    .card-header {
+        color: white !important;
+        font-size: 32px !important;
+    }
+
+    .card-body ul li {
+        color: white !important;
+        font-size: 22px !important;
+    }
+</style>

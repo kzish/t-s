@@ -19,8 +19,8 @@
                 {{-- Circle --}}
                 <div class="rounded-circle border d-flex justify-content-center align-items-center mb-2"
                     style="width: 40px; height: 40px;
-                        background-color: {{ $step['number'] == $active ? '#006d6d' : '#fff' }};
-                        color: {{ $step['number'] == $active ? '#fff' : '#000' }}; border-color:#006d6d!important">
+                        background-color: {{ $step['number'] <= $active ? '#006d6d' : '#fff' }};
+                        color: {{ $step['number'] <= $active ? '#fff' : '#000' }}; border-color:#006d6d!important">
                     {{ $step['number'] }}
                 </div>
 
